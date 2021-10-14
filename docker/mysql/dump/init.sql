@@ -1,0 +1,9 @@
+USE my_budget;
+
+CREATE TABLE IF NOT EXISTS transactions (
+    transaction_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    amount FLOAT NOT NULL,
+    transaction_type VARCHAR(255) NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=INNODB;
